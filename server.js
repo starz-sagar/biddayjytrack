@@ -46,6 +46,8 @@ app.post("/visit", async (req, res) => {
     res.send("OK");
 });
 
-app.listen(3000, () => {
-    console.log("Visit Logger Running");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Visit Logger Running on port ${PORT}`);
 });
